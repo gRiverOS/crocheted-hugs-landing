@@ -16,7 +16,7 @@ const Footer = () => {
               que perduran en el tiempo.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-background/80 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/pequenosabrazos_cl" className="text-background/80 hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="mailto:info@pequeñosabrazos.cl" className="text-background/80 hover:text-primary transition-colors">
@@ -54,10 +54,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-sm text-background/80">
-              <li>Santiago, Chile</li>
+              {/* <li>Santiago, Chile</li> */}
               <li>info@pequeñosabrazos.cl</li>
-              <li>+56 9 1234 5678</li>
-              <li>Lun - Vie: 9:00 - 18:00</li>
+              <li>+56 9 6104 0176</li>
+              {/* <li>Lun - Vie: 9:00 - 18:00</li> */}
             </ul>
           </div>
         </div>
@@ -66,8 +66,10 @@ const Footer = () => {
           <p className="text-sm text-background/80">
             © 2024 Pequeños Abrazos. Todos los derechos reservados.
           </p>
+          <p className="text-sm text-background/80">
+          Desarrollado por <a href="https://icomers.cl" className="text-background/80 hover:text-primary transition-colors">iCOMERS</a></p>
           <p className="text-sm text-background/80 mt-2 md:mt-0">
-            Hecho con <Heart className="inline h-4 w-4 text-primary" /> en Chile
+            Hecho con <Heart className="inline h-4 w-4 text-primary" /> en Santo Domingo, Chile
           </p>
         </div>
       </div>

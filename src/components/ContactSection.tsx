@@ -54,7 +54,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Teléfono</div>
-                    <div className="text-muted-foreground">+56 9 1234 5678</div>
+                    <div className="text-muted-foreground">+56 9 6104 0176</div>
                   </div>
                 </div>
 
@@ -64,7 +64,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Ubicación</div>
-                    <div className="text-muted-foreground">Santiago, Chile</div>
+                    <div className="text-muted-foreground">Santo Domingo, San Antonio, Chile</div>
                   </div>
                 </div>
               </div>

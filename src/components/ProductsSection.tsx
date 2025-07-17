@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,6 +7,7 @@ import teddyBear from '@/assets/teddy-bear.jpg';
 import bunny from '@/assets/bunny.jpg';
 import collection from '@/assets/collection.jpg';
 import { useNavigate } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
 
 const products = [
   {
@@ -41,7 +43,9 @@ const products = [
 ];
 
 const ProductsSection = () => {
+  const [showAlert, setShowAlert] = useState(false);
   const navigate = useNavigate();
+  const { toast } = useToast();
   return (
     <section id="productos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -114,11 +118,19 @@ const ProductsSection = () => {
             size="lg"
             variant="outline"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            onClick={() => navigate('/en-construccion')}
+            onClick={() => setShowAlert(true)}
           >
             Ver Todos los Productos
           </Button>
         </div>
+
+        {showAlert && (
+          <div className="mt-8 flex justify-center">
+            <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded shadow max-w-md w-full text-center">
+              <strong>¡Próximamente!</strong> Estamos trabajando para mostrarte todos los productos.
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

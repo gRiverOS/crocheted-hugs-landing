@@ -59,11 +59,33 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center mt-12">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => {
+              const galeria = document.getElementById('galeria-productos');
+              if (galeria) {
+                galeria.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Ver Todos los Productos
+          </Button>
+        </div>
+
+        <div
+          id="galeria-productos"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {products.map((product) => (
-            <Card key={product.id} className="group hover:shadow-glow transition-all duration-300">
+            <Card
+              key={product.id}
+              className="group hover:shadow-glow transition-all duration-300 bg-card text-card-foreground rounded-lg overflow-hidden"
+            >
               <CardContent className="p-0">
-                <div className="relative overflow-hidden rounded-t-lg">
+                <div className="relative overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -74,11 +96,7 @@ const ProductsSection = () => {
                       Más Popular
                     </Badge>
                   )}
-                  <button className="absolute top-4 right-4 p-2 bg-background/80 backdrop-blur-sm rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
-                    <Heart className="h-4 w-4" />
-                  </button>
                 </div>
-
                 <div className="p-6 space-y-4">
                   <div className="flex items-center justify-between">
                     <Badge variant="outline" className="text-xs">
@@ -90,38 +108,24 @@ const ProductsSection = () => {
                       ))}
                     </div>
                   </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-3">
-                      {product.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-primary">
-                        {product.price}
-                      </span>
-                      <Button size="sm" className="bg-primary hover:bg-primary/90">
-                        Añadir al Carrito
-                      </Button>
-                    </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    {product.name}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {product.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-primary">
+                      {product.price}
+                    </span>
+                    <Button size="sm" className="bg-primary hover:bg-primary/90">
+                      Añadir al Carrito
+                    </Button>
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            onClick={() => setShowAlert(true)}
-          >
-            Ver Todos los Productos
-          </Button>
         </div>
 
         {showAlert && (

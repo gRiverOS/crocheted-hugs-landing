@@ -5,6 +5,7 @@ import { Heart, Star } from 'lucide-react';
 import teddyBear from '@/assets/teddy-bear.jpg';
 import bunny from '@/assets/bunny.jpg';
 import collection from '@/assets/collection.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const products = [
   {
@@ -40,6 +41,7 @@ const products = [
 ];
 
 const ProductsSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="productos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -108,7 +110,12 @@ const ProductsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => navigate('/en-construccion')}
+          >
             Ver Todos los Productos
           </Button>
         </div>

@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# Pequeños Abrazos
 
-## Project info
+Peluches únicos tejidos a mano con amor usando técnicas de crochet y knitting. Este proyecto es una landing page moderna y responsiva para la marca Pequeños Abrazos, donde se muestran productos artesanales, testimonios y formas de contacto.
 
-**URL**: https://lovable.dev/projects/c57b2bfd-18d9-417e-bea9-f5c3246aaba7
+## Características
 
-## How can I edit this code?
+- Galería de productos amigable y responsiva
+- Lightbox para ver imágenes en grande
+- Secciones de historia, testimonios y contacto
+- Integración con Google Analytics y Clarity
+- Progressive Web App (PWA): instalable en dispositivos móviles
+- Estilos modernos con Tailwind CSS
 
-There are several ways of editing your application.
+## Tecnologías
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c57b2bfd-18d9-417e-bea9-f5c3246aaba7) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
+- React + Vite
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- React Router
+- Lucide Icons
 
-## How can I deploy this project?
+## Instalación y uso
 
-Simply open [Lovable](https://lovable.dev/projects/c57b2bfd-18d9-417e-bea9-f5c3246aaba7) and click on Share -> Publish.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/pequenos-abrazos-landing.git
+   cd pequenos-abrazos-landing
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
 
-## Can I connect a custom domain to my Lovable project?
+## Estructura principal
 
-Yes, you can!
+- `src/components/` — Componentes reutilizables y secciones de la landing
+- `src/assets/` — Imágenes de productos y recursos gráficos
+- `public/` — Archivos estáticos, íconos y `site.webmanifest`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## PWA
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+El proyecto incluye un archivo `site.webmanifest` y los íconos necesarios para que la web pueda instalarse como app en dispositivos móviles.
+
+## Personalización
+
+- Para agregar productos, añade imágenes en `src/assets/` y actualiza el arreglo `products` en `ProductsSection.tsx`.
+- Para cambiar colores o fuentes, edita `tailwind.config.ts` y los archivos de estilos.
+
+## Créditos
+
+Desarrollado por Pequeños Abrazos e iCOMERS.
+
+---
+
+¿Preguntas o sugerencias? ¡Contáctanos en [Instagram](https://www.instagram.com/pequenosabrazos_cl/)!

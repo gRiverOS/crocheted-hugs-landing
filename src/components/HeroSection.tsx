@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Heart, Sparkle } from 'lucide-react';
-import heroImage from '@/assets/hero-plushies.jpg';
+import heroImage from '@/assets/hero-child-with-crocheted-hugs.jpeg';
 
 const HeroSection = () => {
   return (
@@ -12,7 +12,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2 text-primary">
                 <Sparkle className="h-5 w-5" />
-                <span className="text-sm font-medium">Hechos con amor</span>
+                <span className="text-sm font-medium">Regala con amor</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
                 Peluches únicos
